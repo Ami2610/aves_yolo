@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>YOLO Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Real-Time Birds Detection</h1>
+
+    <!-- VIDEO -->
+    <div class="video-box stop" id="videoBox">
+        <img id="video" src="" alt="Video Stream">
+    </div>
+
+    <!-- CONTROLES -->
+    <div class="controls">
+        <button onclick="toggleVideo()">▶ Start / ⏸ Stop</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* CONTENEDOR DEL VIDEO */
+.video-box {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 18px;
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+/* ESTADO STOP (sin sombra) */
+.video-box.stop {
+    box-shadow: none;
+    padding: 0;
+}
+
+/* ESTADO START (con sombra) */
+.video-box.active {
+    box-shadow: 0 0 30px rgba(0, 180, 255, 0.45);
+}
+
+/* IMAGEN DEL STREAM */
+#video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: none; /* oculto por defecto */
+}
+
+/* visible solo cuando está activo */
+#video.active {
+    display: block;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.8);
+}
